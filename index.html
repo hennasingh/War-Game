@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <head>
     <title>War Project</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="new-deck" class="new-deck">New Deck! Please</button>
+    <div class="header">
+        <button id="new-deck" class="new-deck">Shuffle Deck!</button>
+        <h4>Remaining Cards: <span id="remaining-cards"></span></h4>
+    </div>
+    <h2 id="winner">Game of War</h2>
     <div id="cards" class="cards">
         <div class="card-slot"></div>
         <div class="card-slot"></div>
