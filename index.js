@@ -14,13 +14,15 @@ function generateCards() {
     .then(res => res.json())
     .then(data => {
         console.log(data.cards)
-        let display= ``
-        data.cards.forEach(card => {
-            display += `
-            <img src="${card.image}">
+        const container = document.getElementById('cards')
+        
+        container.children[0].innerHTML = `
+        <img src=${data.cards[0].image} class="card"/>
         `
-        })
-        document.getElementById('cards').innerHTML+= display
+        container.children[1].innerHTML = `
+        <img src=${data.cards[1].image} class="card"/>
+        `
+
 
     })
 }

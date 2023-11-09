@@ -2,16 +2,13 @@ body {
     margin:0;
     padding:0;
     background: url("table.jpeg");
+    height:100vh;
     background-size: cover;
     background-position: center;
-    text-align: center;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 1fr 700px 1fr;
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 button {
@@ -19,21 +16,29 @@ button {
     border: none;
     color: #fff;
     padding: 0.7em 1em;
+    cursor: pointer;
 }
 
 .draw-cards {
-    grid-column: 2;
-    grid-row:3;
     font-size: 1.2rem;
+    align-self: stretch;
 }
 
 .new-deck {
-    grid-column:2;
-    grid-row: 1;
     align-self: start;
-    justify-self: start;
 }
 
-.cards {
-    grid-column: 2;
+.card-slot {
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 200px;
+    width: calc(200px * 5 / 7);
+}
+
+div.card-slot:nth-of-type(1) {
+    margin-bottom: 50px;
+}
+
+.card {
+    width:100%;
 }
